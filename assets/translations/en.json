@@ -1,0 +1,63 @@
+{
+  "appName": "Sportiva",
+
+  "login": "Login",
+  "signIn": "Sign In",
+  "signUp": "Sign Up",
+  "logout": "Logout",
+  "email": "Email",
+  "password": "Password",
+  "confirmPassword": "Confirm Password",
+  "userName": "Username",
+  "mobileNumber": "Mobile Number",
+  "createAccount": "Create Account",
+  "name": "Name",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+
+  "emailIsRequired": "Email is required",
+  "pleaseEnterAValidEmailAddress": "Please enter a valid email address",
+  "passwordIsRequired": "Password is required",
+  "passwordMustBeAtLeast8CharactersLong": "Password must be at least 8 characters long",
+  "passwordMustContainAtLeastOneUppercaseLetter": "Password must contain at least one uppercase letter",
+  "passwordMustContainAtLeastOneLowercaseLetter": "Password must contain at least one lowercase letter",
+  "passwordMustContainAtLeastOneNumber": "Password must contain at least one number",
+  "passwordMustContainAtLeastOneSpecialCharacter": "Password must contain at least one special character",
+  "pleaseConfirmYourPassword": "Please confirm your password",
+  "passwordsDoNotMatch": "Passwords do not match",
+  "phoneNumberIsRequired": "Phone number is required",
+  "pleaseEnterAValidPhoneNumber": "Please enter a valid phone number",
+  "invalidPhoneNumber": "Invalid phone number",
+  "usernameIsRequired": "Username is required",
+  "usernameMustBeAtLeast3CharactersLong": "Username must be at least 3 characters long",
+  "usernameMustBeLessThan500Characters": "Username must be less than 500 characters",
+  "firstNameMustBeAtLeast3CharactersLong": "First name must be at least 3 characters long",
+  "lastNameMustBeAtLeast3CharactersLong": "Last name must be at least 3 characters long",
+  "referralCodeMustBeAtLeast3CharactersLong": "Referral code must be at least 3 characters long",
+  "youMustAgreeToTheTermsAndConditions": "You must agree to the terms and conditions",
+  "isRequired": "is required",
+  "mustBeAtLeast4NumberLong": "Must be at least 4 digits long",
+
+  "loginRequired": "Login Required",
+  "loginRequiredMessage": "You need to be logged in to access this feature.",
+  "notNow": "Not Now",
+
+  "Camera": "Camera",
+  "Gallery": "Gallery",
+  "skip": "SKIP",
+  "next": "Next",
+  "back": "Back",
+  "get_started": "Get Started",
+
+  "on_one_title_line1": "Welcome to",
+  "on_one_title_line2": "SPORTIVA",
+  "on_one_subtitle": "Manage your fitness journey in one powerful platform.",
+
+  "on_two_title": "Book & Train Easily",
+  "on_two_subtitle": "Discover classes, book sessions, and manage your schedule effortlessly.",
+
+  "on_three_title": "Track Your Fitness Journey",
+  "on_three_subtitle": "Monitor attendance, memberships, and fitness progress in real time."
+
+
+}
