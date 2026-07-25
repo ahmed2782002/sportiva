@@ -1,7 +1,4 @@
-// Flutter imports:
 import 'package:flutter/material.dart';
-
-// Project imports:
 import 'constants/app_context.dart';
 
 void navigateTo(Widget widget) => Navigator.push(
@@ -12,17 +9,16 @@ void navigateTo(Widget widget) => Navigator.push(
 void navigateBack({dynamic result}) =>
     Navigator.pop(AppContext.context, result);
 
-void navigateReplacementTo(widget) => Navigator.pushReplacement(
+void navigateReplacementTo(Widget widget) => Navigator.pushReplacement(
   AppContext.context,
   MaterialPageRoute(builder: (context) => widget),
 );
 
-void navigateNamedTo(widget) => Navigator.pushNamed(AppContext.context, widget);
+void navigateNamedTo(String routeName) =>
+    Navigator.pushNamed(AppContext.context, routeName);
 
 void navigateFinish(Widget widget) => Navigator.pushAndRemoveUntil(
   AppContext.context,
   MaterialPageRoute(builder: (context) => widget),
-  (route) {
-    return false;
-  },
+  (route) => false,
 );

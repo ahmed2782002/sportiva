@@ -4,7 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/constants/app_colors.dart';
-import '../../../../onboarding/presentation/view/screens/onboarding_screen.dart';
+import '../../../../../core/utils/nav.dart';
+import '../../../../role_selection/presentation/view/screens/role_selection_screen.dart';
 import '../../../data/model/language_model.dart';
 import '../../view_model/language_selection_cubit.dart';
 import '../../view_model/language_selection_state.dart';
@@ -86,11 +87,7 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen>
   }
 
   void _onLanguageConfirmed(LanguageModel language) {
-    Navigator.pushAndRemoveUntil(
-      context,
-      MaterialPageRoute(builder: (_) => const OnboardingScreen()),
-      (route) => false,
-    );
+    navigateFinish(const RoleSelectionScreen());
   }
 
   @override

@@ -7,6 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/utils/constants/app_colors.dart';
 import '../../../../../core/utils/constants/app_strings.dart';
 import '../../../../../core/utils/constants/app_text_font.dart';
+import '../../../../../core/utils/nav.dart';
+import '../../../../auth/presentation/view/screens/login_screen.dart';
 import '../../view_model/onboarding_cubit.dart';
 import '../../view_model/onboarding_state.dart';
 import '../widgets/onboarding_bottom_bar.dart';
@@ -17,8 +19,7 @@ class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
 
   void _onFinish(BuildContext context) {
-    // Replace with your router navigation
-    debugPrint('Onboarding complete');
+    navigateFinish(const LoginScreen());
   }
 
   void _onSkip(BuildContext context) {
@@ -36,8 +37,6 @@ class OnboardingScreen extends StatelessWidget {
     );
   }
 }
-
-// ── View ──────────────────────────────────────────────────────────────────────
 
 class _OnboardingView extends StatefulWidget {
   final void Function(BuildContext) onFinish;
@@ -104,10 +103,7 @@ class _OnboardingViewState extends State<_OnboardingView>
           child: SafeArea(
             child: Column(
               children: [
-                // ── Top bar ──────────────────────────────────────────────
                 _TopBar(onSkip: () => widget.onSkip(context)),
-
-                // ── PageView ─────────────────────────────────────────────
                 Expanded(
                   child: PageView.builder(
                     controller:  cubit.pageController,
@@ -124,7 +120,6 @@ class _OnboardingViewState extends State<_OnboardingView>
 
                 SizedBox(height: 24.h),
 
-                // ── Bottom bar ───────────────────────────────────────────
                 OnboardingBottomBar(
                   onFinish: () => widget.onFinish(context),
                 ),
@@ -136,8 +131,6 @@ class _OnboardingViewState extends State<_OnboardingView>
     );
   }
 }
-
-// ── Top Bar ───────────────────────────────────────────────────────────────────
 
 class _TopBar extends StatelessWidget {
   final VoidCallback onSkip;
@@ -152,7 +145,6 @@ class _TopBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // Brand name
               Text(
                 'SPORTIVA',
                 style: TextStyle(
@@ -163,7 +155,6 @@ class _TopBar extends StatelessWidget {
                 ),
               ),
 
-              // Skip — hidden on last page
               AnimatedOpacity(
                 duration: const Duration(milliseconds: 250),
                 opacity:  state.isLastPage ? 0 : 1,

@@ -89,4 +89,25 @@ class AppString {
   // Onboarding page 3
   static const String onThreeTitle     = 'on_three_title';
   static const String onThreeSubtitle  = 'on_three_subtitle';
+
+  static const String chooseAccountType = 'choose_account_type';
+  static const String chooseAccountTypeSubtitle = 'choose_account_type_subtitle';
+  static const String regularUser = 'regular_user';
+  static const String venueOwner = 'venue_owner';
+  static const String coach = 'coach';
+  static const String continueAs = 'continue_as';
+  static const String welcomeBack = 'welcome_back';
+  static const String loginSubtitle = 'login_subtitle';
+  static const String forgotPassword = 'forgot_password';
+  static const String noAccount = 'no_account';
+  static const String alreadyHaveAccount = 'already_have_account';
+  static const String registerSubtitle = 'register_subtitle';
+  static const String venueName = 'venue_name';
+  static const String sportSpecialty = 'sport_specialty';
+  static const String homeGreeting = 'home_greeting';
+  static const String homeSubtitle = 'home_subtitle';
+  static const String explore = 'explore';
+  static const String myBookings = 'my_bookings';
+  static const String profile = 'profile';
+  static const String selectedAccountRole = 'selected_account_role';
 }
