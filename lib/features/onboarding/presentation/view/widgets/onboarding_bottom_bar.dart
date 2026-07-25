@@ -67,7 +67,7 @@ class OnboardingBottomBar extends StatelessWidget {
   }
 }
 
-// ── Back Button ───────────────────────────────────────────────────────────────
+
 
 class _BackButton extends StatelessWidget {
   final VoidCallback onTap;
@@ -87,8 +87,6 @@ class _BackButton extends StatelessWidget {
     );
   }
 }
-
-// ── Next / Get Started Button ─────────────────────────────────────────────────
 
 class _NextButton extends StatelessWidget {
   final bool        isLast;

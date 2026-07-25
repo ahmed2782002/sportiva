@@ -60,4 +60,23 @@
   "on_three_subtitle": "Monitor attendance, memberships, and fitness progress in real time."
 
 
+  ,"choose_account_type": "How will you use Sportiva?"
+  ,"choose_account_type_subtitle": "Choose the experience that best matches your fitness journey."
+  ,"regular_user": "Fitness enthusiast"
+  ,"venue_owner": "Venue owner"
+  ,"coach": "Coach"
+  ,"continue_as": "Continue as"
+  ,"welcome_back": "Welcome back"
+  ,"login_subtitle": "Sign in to continue your fitness journey."
+  ,"forgot_password": "Forgot password?"
+  ,"no_account": "Don't have an account?"
+  ,"already_have_account": "Already have an account?"
+  ,"register_subtitle": "Create your account as"
+  ,"venue_name": "Venue name"
+  ,"sport_specialty": "Sport specialty"
+  ,"home_greeting": "Ready to move?"
+  ,"home_subtitle": "Your next great session starts here."
+  ,"explore": "Explore"
+  ,"my_bookings": "My bookings"
+  ,"profile": "Profile"
 }
