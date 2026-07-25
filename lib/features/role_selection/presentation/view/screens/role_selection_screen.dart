@@ -30,18 +30,53 @@ class RoleSelectionScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('SPORTIVA', style: TextStyle(color: AppColors.primaryColor, fontSize: 18.sp, fontWeight: FontWeight.w800, letterSpacing: 1.6)),
+                  Text(
+                    'SPORTIVA',
+                    style: TextStyle(
+                      color: AppColors.primaryColor,
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 1.6,
+                    ),
+                  ),
                   SizedBox(height: 48.h),
-                  Text(AppString.chooseAccountType.tr(), style: TextStyle(color: AppColors.primaryDark, fontSize: 28.sp, fontWeight: FontWeight.w800)),
+                  Text(
+                    AppString.chooseAccountType.tr(),
+                    style: TextStyle(
+                      color: AppColors.primaryDark,
+                      fontSize: 28.sp,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
                   SizedBox(height: 10.h),
-                  Text(AppString.chooseAccountTypeSubtitle.tr(), style: TextStyle(color: AppColors.gray, fontSize: 15.sp, height: 1.5)),
+                  Text(
+                    AppString.chooseAccountTypeSubtitle.tr(),
+                    style: TextStyle(
+                      color: AppColors.gray,
+                      fontSize: 15.sp,
+                      height: 1.5,
+                    ),
+                  ),
                   SizedBox(height: 30.h),
-                  ...AccountRole.values.map((role) => Padding(padding: EdgeInsets.only(bottom: 14.h), child: RoleCard(role: role, selected: state.selectedRole == role, onTap: () => cubit.selectRole(role)))),
+                  ...AccountRole.values.map(
+                    (role) => Padding(
+                      padding: EdgeInsets.only(bottom: 14.h),
+                      child: RoleCard(
+                        role: role,
+                        selected: state.selectedRole == role,
+                        onTap: () => cubit.selectRole(role),
+                      ),
+                    ),
+                  ),
                   const Spacer(),
                   MasterButton(
                     typeButton: TypeButton.textOnly,
-                    text: '${AppString.continueAs.tr()} ${state.selectedRole.title}',
-                    onPressed: () async { await cubit.saveSelectedRole(); navigateTo(const OnboardingScreen()); },
+                    text:
+                        '${AppString.continueAs.tr()} ${state.selectedRole.title}',
+                    onPressed: () async {
+                      await cubit.saveSelectedRole();
+                      navigateTo(const OnboardingScreen());
+                    },
                     height: 56.h,
                     borderRadius: 18.r,
                   ),

@@ -14,13 +14,21 @@ class RegisterCubit extends Cubit<RegisterState> {
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
 
-  void togglePasswordVisibility() => emit(state.copyWith(isPasswordObscured: !state.isPasswordObscured));
+  void togglePasswordVisibility() =>
+      emit(state.copyWith(isPasswordObscured: !state.isPasswordObscured));
 
   bool validate() => formKey.currentState?.validate() ?? false;
 
   @override
   Future<void> close() {
-    for (final controller in [nameController, emailController, phoneController, extraController, passwordController, confirmPasswordController]) {
+    for (final controller in [
+      nameController,
+      emailController,
+      phoneController,
+      extraController,
+      passwordController,
+      confirmPasswordController,
+    ]) {
       controller.dispose();
     }
     return super.close();

@@ -18,7 +18,8 @@ class LoginCubit extends Cubit<LoginState> {
     orElse: () => AccountRole.user,
   );
 
-  void togglePasswordVisibility() => emit(state.copyWith(isPasswordObscured: !state.isPasswordObscured));
+  void togglePasswordVisibility() =>
+      emit(state.copyWith(isPasswordObscured: !state.isPasswordObscured));
 
   bool validate() => formKey.currentState?.validate() ?? false;
 
