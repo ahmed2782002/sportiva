@@ -96,34 +96,39 @@ class _OnboardingViewState extends State<_OnboardingView>
 
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: FadeTransition(
-        opacity: _fadeIn,
-        child: SlideTransition(
-          position: _slideIn,
-          child: SafeArea(
-            child: Column(
-              children: [
-                _TopBar(onSkip: () => widget.onSkip(context)),
-                Expanded(
-                  child: PageView.builder(
-                    controller:  cubit.pageController,
-                    onPageChanged: cubit.onPageChanged,
-                    itemCount:   OnboardingConstants.pages.length,
-                    itemBuilder: (_, i) => Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 24.w),
-                      child: OnboardingPageItem(
-                        page: OnboardingConstants.pages[i],
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: AppColors.backgroundGradient,
+        ),
+        child: FadeTransition(
+          opacity: _fadeIn,
+          child: SlideTransition(
+            position: _slideIn,
+            child: SafeArea(
+              child: Column(
+                children: [
+                  _TopBar(onSkip: () => widget.onSkip(context)),
+                  Expanded(
+                    child: PageView.builder(
+                      controller:  cubit.pageController,
+                      onPageChanged: cubit.onPageChanged,
+                      itemCount:   OnboardingConstants.pages.length,
+                      itemBuilder: (_, i) => Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 24.w),
+                        child: OnboardingPageItem(
+                          page: OnboardingConstants.pages[i],
+                        ),
                       ),
                     ),
                   ),
-                ),
 
-                SizedBox(height: 24.h),
+                  SizedBox(height: 24.h),
 
-                OnboardingBottomBar(
-                  onFinish: () => widget.onFinish(context),
-                ),
-              ],
+                  OnboardingBottomBar(
+                    onFinish: () => widget.onFinish(context),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -167,7 +172,7 @@ class _TopBar extends StatelessWidget {
                       style: TextStyle(
                         fontSize:      13.sp,
                         fontWeight:    FontManger.semiBold,
-                        color:         AppColors.gray,
+                        color:         AppColors.textHint,
                         letterSpacing: 0.5,
                       ),
                     ),

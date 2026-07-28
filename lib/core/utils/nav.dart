@@ -22,3 +22,4 @@ void navigateFinish(Widget widget) => Navigator.pushAndRemoveUntil(
   MaterialPageRoute(builder: (context) => widget),
   (route) => false,
 );
+

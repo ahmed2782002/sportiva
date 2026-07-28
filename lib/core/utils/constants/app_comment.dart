@@ -84,7 +84,7 @@ Widget cachedImage(
         fit: fit ?? BoxFit.cover,
         color: color,
         alignment: alignment ?? Alignment.center,
-        errorBuilder: (_, __, ___) =>
+        errorBuilder: (context, error, stackTrace) =>
             placeHolderWidget(height: height, width: width, radius: radius),
       ),
     );
@@ -98,7 +98,7 @@ Widget cachedImage(
       width: width,
       fit: fit ?? BoxFit.cover,
       alignment: alignment ?? Alignment.center,
-      errorBuilder: (_, __, ___) =>
+      errorBuilder: (context, error, stackTrace) =>
           placeHolderWidget(height: height, width: width, radius: radius),
     ),
   );

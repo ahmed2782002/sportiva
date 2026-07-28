@@ -11,7 +11,7 @@ import 'package:flutter/foundation.dart';
 // Project imports:
 import 'endpoints.dart';
 import 'exceptions_interceptor.dart';
-import 'reques_iInterceptor.dart';
+import 'request_interceptor.dart';
 
 class DioClient {
   final Dio _dio;

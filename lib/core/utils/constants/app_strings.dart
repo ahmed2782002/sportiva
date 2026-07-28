@@ -110,4 +110,106 @@ class AppString {
   static const String myBookings = 'my_bookings';
   static const String profile = 'profile';
   static const String selectedAccountRole = 'selected_account_role';
+  static const String home = 'home';
+  static const String coaches = 'coaches';
+  static const String pitches = 'pitches';
+  static const String sessions = 'sessions';
+  static const String requests = 'requests';
+  static const String trainees = 'trainees';
+  static const String venueOverview = 'venue_overview';
+  static const String coachDashboard = 'coach_dashboard';
+
+  // Home - User
+  static const String userGreeting = 'user_greeting';
+  static const String userSearchHint = 'user_search_hint';
+  static const String upcomingMatch = 'upcoming_match';
+  static const String todayMatchTime = 'today_match_time';
+  static const String demoVenueName = 'demo_venue_name';
+  static const String demoVenueLocation = 'demo_venue_location';
+  static const String demoVenuePrice = 'demo_venue_price';
+  static const String sportsSectionTitle = 'sports_section_title';
+  static const String seeAll = 'see_all';
+  static const String all = 'all';
+  static const String featuredVenuesTitle = 'featured_venues_title';
+  static const String topCoachesTitle = 'top_coaches_title';
+  static const String bookSession = 'book_session';
+  static const String sportFootball = 'sport_football';
+  static const String sportPadel = 'sport_padel';
+  static const String sportBasketball = 'sport_basketball';
+  static const String sportSwimming = 'sport_swimming';
+  static const String sportTableTennis = 'sport_table_tennis';
+  static const String venueTagAc = 'venue_tag_ac';
+  static const String venueTagTurf = 'venue_tag_turf';
+  static const String venueDemo1 = 'venue_demo_1';
+  static const String venueDemo2 = 'venue_demo_2';
+  static const String venueDemoPrice1 = 'venue_demo_price_1';
+  static const String venueDemoPrice2 = 'venue_demo_price_2';
+  static const String coachDemoName = 'coach_demo_name';
+  static const String coachDemoSpecialty = 'coach_demo_specialty';
+
+  // Home - Venue Owner
+  static const String venueOwnerGreeting = 'venue_owner_greeting';
+  static const String venueOpenStatus = 'venue_open_status';
+  static const String todayBookings = 'today_bookings';
+  static const String todayBookingsValue = 'today_bookings_value';
+  static const String todayBookingsTrend = 'today_bookings_trend';
+  static const String todayRevenue = 'today_revenue';
+  static const String todayRevenueValue = 'today_revenue_value';
+  static const String todayRevenueTrend = 'today_revenue_trend';
+  static const String occupancyRate = 'occupancy_rate';
+  static const String occupancyRateValue = 'occupancy_rate_value';
+  static const String occupancyRateTrend = 'occupancy_rate_trend';
+  static const String venueRating = 'venue_rating';
+  static const String venueRatingValue = 'venue_rating_value';
+  static const String venueRatingTrend = 'venue_rating_trend';
+  static const String quickActions = 'quick_actions';
+  static const String addSlot = 'add_slot';
+  static const String editPrice = 'edit_price';
+  static const String scheduleMaintenance = 'schedule_maintenance';
+  static const String pitchesStatusTitle = 'pitches_status_title';
+  static const String managePitches = 'manage_pitches';
+  static const String recentBookingsTitle = 'recent_bookings_title';
+  static const String pitch1Name = 'pitch_1_name';
+  static const String pitch2Name = 'pitch_2_name';
+  static const String pitch3Name = 'pitch_3_name';
+  static const String pitchStatusBooked = 'pitch_status_booked';
+  static const String pitchStatusAvailable = 'pitch_status_available';
+  static const String bookingUser1 = 'booking_user_1';
+  static const String bookingVenue1 = 'booking_venue_1';
+  static const String bookingTime1 = 'booking_time_1';
+  static const String bookingPrice1 = 'booking_price_1';
+  static const String bookingUser2 = 'booking_user_2';
+  static const String bookingVenue2 = 'booking_venue_2';
+  static const String bookingTime2 = 'booking_time_2';
+  static const String bookingPrice2 = 'booking_price_2';
+
+  // Home - Coach
+  static const String coachGreeting = 'coach_greeting';
+  static const String coachSpecialtyBadge = 'coach_specialty_badge';
+  static const String coachSessionsToday = 'coach_sessions_today';
+  static const String coachSessionsValue = 'coach_sessions_value';
+  static const String coachSessionsTrend = 'coach_sessions_trend';
+  static const String coachTraineesTitle = 'coach_trainees_title';
+  static const String coachTraineesValue = 'coach_trainees_value';
+  static const String coachTraineesTrend = 'coach_trainees_trend';
+  static const String coachEarningsTitle = 'coach_earnings_title';
+  static const String coachEarningsValue = 'coach_earnings_value';
+  static const String coachEarningsTrend = 'coach_earnings_trend';
+  static const String coachRatingTitle = 'coach_rating_title';
+  static const String coachRatingValue = 'coach_rating_value';
+  static const String coachRatingTrend = 'coach_rating_trend';
+  static const String todaysSchedule = 'todays_schedule';
+  static const String viewCalendar = 'view_calendar';
+  static const String newTrainingRequests = 'new_training_requests';
+  static const String acceptRequest = 'accept_request';
+  static const String session1Time = 'session_1_time';
+  static const String session1Trainee = 'session_1_trainee';
+  static const String session1Type = 'session_1_type';
+  static const String session2Time = 'session_2_time';
+  static const String session2Trainee = 'session_2_trainee';
+  static const String session2Type = 'session_2_type';
+  static const String requestName = 'request_name';
+  static const String requestProgram = 'request_program';
 }
+
+

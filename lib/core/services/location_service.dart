@@ -67,13 +67,13 @@ class LocationServices {
           ),
         );
         if (kDebugMode) {
-          print("Current Location: $position");
+          debugPrint("Current Location: $position");
         }
         currentLocation = LatLng(position.latitude, position.longitude);
         return Right(position);
       } catch (error) {
         if (kDebugMode) {
-          print("Error Current Location: ${error.toString()}");
+          debugPrint("Error Current Location: ${error.toString()}");
         }
         //  showToastMessage(error.toString());
         return Left(error.toString());
@@ -176,7 +176,7 @@ class LocationServices {
     String googleUrl =
         'https://www.google.com/maps/search/?api=1&query=${location?.latitude ?? currentLocation!.latitude},${location?.longitude ?? currentLocation!.longitude}';
     if (await canLaunchUrl(Uri.parse(googleUrl))) {
-      print('launching com googleUrl');
+      debugPrint('launching com googleUrl');
       await launchUrl(
         Uri.parse(googleUrl),
         mode: LaunchMode.externalApplication,

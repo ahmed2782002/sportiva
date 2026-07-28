@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../core/utils/constants/app_colors.dart';
 import '../../../../../core/widgets/auth_text_form_field.dart';
 import 'auth_label.dart';
 
@@ -31,7 +33,11 @@ class AuthInputField extends StatelessWidget {
       AuthTextFormField(
         controller: controller,
         hintText: label,
-        prefixIcon: Icon(icon),
+        prefixIcon: Icon(
+          icon,
+          color: AppColors.primaryColor.withValues(alpha: 0.8),
+          size: 20.sp,
+        ),
         obscureText: obscureText,
         textInputType: textInputType,
         suffixIcon: suffixIcon,

@@ -39,11 +39,32 @@ class _ImageSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20.r),
-      child: Image.asset(
-        imagePath,
-        width:  double.infinity,
-        height: 340.h,
-        fit:    BoxFit.cover,
+      child: Stack(
+        children: [
+          Image.asset(
+            imagePath,
+            width:  double.infinity,
+            height: 340.h,
+            fit:    BoxFit.cover,
+          ),
+          // Subtle gradient overlay at bottom for depth
+          Positioned(
+            left: 0, right: 0, bottom: 0,
+            child: Container(
+              height: 80.h,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end:   Alignment.bottomCenter,
+                  colors: [
+                    AppColors.colorTransparent,
+                    AppColors.primaryDark.withValues(alpha: 0.18),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -107,7 +128,7 @@ class _SubtitleSection extends StatelessWidget {
         style: TextStyle(
           fontSize:   15.sp,
           fontWeight: FontManger.regular,
-          color:      AppColors.gray,
+          color:      AppColors.neutral600,
           height:     1.5,
         ),
       ),

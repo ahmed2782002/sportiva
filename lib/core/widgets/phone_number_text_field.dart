@@ -10,10 +10,15 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input_test.dart';
+// ignore: implementation_imports
 import 'package:intl_phone_number_input/src/models/country_model.dart';
+// ignore: implementation_imports
 import 'package:intl_phone_number_input/src/providers/country_provider.dart';
+// ignore: implementation_imports
 import 'package:intl_phone_number_input/src/utils/phone_number.dart';
+// ignore: implementation_imports
 import 'package:intl_phone_number_input/src/utils/phone_number/phone_number_util.dart';
+// ignore: implementation_imports
 import 'package:intl_phone_number_input/src/utils/widget_view.dart';
 
 // Project imports:
@@ -344,6 +349,7 @@ class _InputWidgetState extends State<CustomInternationalPhoneNumberInput> {
 
 class _InputWidgetView
     extends WidgetView<CustomInternationalPhoneNumberInput, _InputWidgetState> {
+  // ignore: overridden_fields
   @override
   final _InputWidgetState state;
 

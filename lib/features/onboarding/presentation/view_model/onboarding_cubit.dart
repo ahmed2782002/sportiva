@@ -35,14 +35,7 @@ class OnboardingCubit extends Cubit<OnboardingState> {
     }
   }
 
-  void skip(VoidCallback onSkip) {
-    // Navigate to last page
-    pageController.animateToPage(
-      _total - 1,
-      duration: const Duration(milliseconds: 400),
-      curve:    Curves.easeInOut,
-    );
-  }
+  void skip(VoidCallback onSkip) => onSkip();
 
   void finish(VoidCallback onFinish) => onFinish();
 

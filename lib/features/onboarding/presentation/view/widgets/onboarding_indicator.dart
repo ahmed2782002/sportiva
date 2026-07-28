@@ -36,7 +36,7 @@ class _Dot extends StatelessWidget {
       width:  isActive ? 24.w : 8.w,
       height: 6.h,
       decoration: BoxDecoration(
-        color:        isActive ? AppColors.primaryColor : const Color(0xFFECDCE7),
+        color:        isActive ? AppColors.primaryColor : AppColors.borderSubtle,
         borderRadius: BorderRadius.circular(4.r),
       ),
     );

@@ -3,17 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../core/utils/constants/app_colors.dart';
 import '../../../../../core/utils/constants/app_strings.dart';
 import '../../../../../core/utils/nav.dart';
 import '../../../../../core/utils/validators.dart';
 import '../../../../../core/widgets/Button/master_button.dart';
-import '../../../../home/presentation/view/screens/home_screen.dart';
+import '../../../../layout/presentation/view/screens/layout_screen.dart';
 import '../../../../role_selection/data/model/account_role.dart';
 import '../../view_model/register_cubit.dart';
 import '../../view_model/register_state.dart';
 import '../widgets/auth_input_field.dart';
 import '../widgets/auth_layout.dart';
 import '../widgets/auth_switch.dart';
+
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key, required this.role});
@@ -33,6 +35,7 @@ class RegisterScreen extends StatelessWidget {
       builder: (context, state) {
         final cubit = context.read<RegisterCubit>();
         return AuthLayout(
+          showBackButton: true,
           title: AppString.createAccount.tr(),
           subtitle: '${AppString.registerSubtitle.tr()} ${role.title}',
           child: Form(
@@ -47,7 +50,7 @@ class RegisterScreen extends StatelessWidget {
                   validator: (value) =>
                       Validators.validateRequired(value, AppString.name.tr()),
                 ),
-                SizedBox(height: 16.h),
+                SizedBox(height: 18.h),
                 AuthInputField(
                   label: AppString.email.tr(),
                   controller: cubit.emailController,
@@ -55,7 +58,7 @@ class RegisterScreen extends StatelessWidget {
                   textInputType: TextInputType.emailAddress,
                   validator: Validators.validateEmail,
                 ),
-                SizedBox(height: 16.h),
+                SizedBox(height: 18.h),
                 AuthInputField(
                   label: AppString.mobileNumber.tr(),
                   controller: cubit.phoneController,
@@ -66,7 +69,7 @@ class RegisterScreen extends StatelessWidget {
                     AppString.mobileNumber.tr(),
                   ),
                 ),
-                SizedBox(height: 16.h),
+                SizedBox(height: 18.h),
                 AuthInputField(
                   label: _extraLabel,
                   controller: cubit.extraController,
@@ -76,7 +79,7 @@ class RegisterScreen extends StatelessWidget {
                   validator: (value) =>
                       Validators.validateRequired(value, _extraLabel),
                 ),
-                SizedBox(height: 16.h),
+                SizedBox(height: 18.h),
                 AuthInputField(
                   label: AppString.password.tr(),
                   controller: cubit.passwordController,
@@ -87,12 +90,14 @@ class RegisterScreen extends StatelessWidget {
                       state.isPasswordObscured
                           ? Icons.visibility_off_outlined
                           : Icons.visibility_outlined,
+                      color: AppColors.gray,
+                      size: 20.sp,
                     ),
                     onPressed: cubit.togglePasswordVisibility,
                   ),
                   validator: Validators.validatePassword,
                 ),
-                SizedBox(height: 16.h),
+                SizedBox(height: 18.h),
                 AuthInputField(
                   label: AppString.confirmPassword.tr(),
                   controller: cubit.confirmPasswordController,
@@ -103,19 +108,19 @@ class RegisterScreen extends StatelessWidget {
                     cubit.passwordController.text,
                   ),
                 ),
-                SizedBox(height: 24.h),
+                SizedBox(height: 28.h),
                 MasterButton(
                   typeButton: TypeButton.textOnly,
                   text: AppString.createAccount.tr(),
                   onPressed: () {
                     if (cubit.validate()) {
-                      navigateFinish(HomeScreen(role: role));
+                      navigateFinish(MainLayoutScreen(role: role));
                     }
                   },
                   height: 56.h,
                   borderRadius: 18.r,
                 ),
-                SizedBox(height: 16.h),
+                SizedBox(height: 24.h),
                 AuthSwitch(
                   text: AppString.alreadyHaveAccount.tr(),
                   action: AppString.signIn.tr(),

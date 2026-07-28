@@ -10,14 +10,28 @@ class AuthLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Padding(
-    padding: EdgeInsets.only(bottom: 8.h),
-    child: Text(
-      value,
-      style: TextStyle(
-        color: AppColors.primaryDark,
-        fontSize: 14.sp,
-        fontWeight: FontWeight.w700,
-      ),
+    padding: EdgeInsets.only(bottom: 6.h, left: 2.w, right: 2.w),
+    child: Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          width: 5.w,
+          height: 5.h,
+          decoration: const BoxDecoration(
+            color: AppColors.primary400,
+            shape: BoxShape.circle,
+          ),
+        ),
+        SizedBox(width: 6.w),
+        Text(
+          value,
+          style: TextStyle(
+            color: AppColors.primaryDark,
+            fontSize: 13.sp,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ],
     ),
   );
 }

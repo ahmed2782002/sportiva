@@ -56,6 +56,8 @@ class AuthTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final effectiveFillColor = fillColor ?? AppColors.white;
+
     return TextFormField(
       maxLines: obscureText == true ? 1 : maxLines,
       readOnly: readOnly ?? false,
@@ -74,40 +76,48 @@ class AuthTextFormField extends StatelessWidget {
       style:
           textStyle ??
           TextStyle(
-            color: AppColors.black,
-            fontSize: 16.sp,
-            fontWeight: FontManger.regular,
+            color: AppColors.primaryDark,
+            fontSize: 15.sp,
+            fontWeight: FontManger.medium,
           ),
       decoration: InputDecoration(
-        errorStyle: errorStyle,
+        contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+        errorStyle: errorStyle ?? TextStyle(fontSize: 12.sp, height: 1.2),
         counterText: "",
-        prefixIconConstraints: BoxConstraints(minWidth: 40.w, minHeight: 40.h),
-        suffixIconConstraints: BoxConstraints(minWidth: 40.w, minHeight: 40.h),
+        prefixIconConstraints: BoxConstraints(minWidth: 48.w, minHeight: 48.h),
+        suffixIconConstraints: BoxConstraints(minWidth: 48.w, minHeight: 48.h),
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         suffix: suffix,
-        filled: false,
-        focusColor: AppColors.colorTransparent,
-        fillColor: Colors.transparent,
+        filled: true,
+        fillColor: effectiveFillColor,
         hintText: hintText,
         hintStyle:
             hintStyle ??
             GoogleFonts.roboto(
-              color: AppColors.black,
-              fontSize: 12.sp,
+              color: AppColors.gray.withValues(alpha: 0.7),
+              fontSize: 14.sp,
               fontWeight: FontManger.regular,
             ),
-        border: OutlineInputBorder(
+        border: border ?? OutlineInputBorder(
           borderRadius: BorderRadius.circular(16.r),
-          borderSide: BorderSide(color: AppColors.gray, width: 1),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16.r),
-          borderSide: BorderSide(color: AppColors.primaryColor, width: 1.4),
+          borderSide: const BorderSide(color: AppColors.borderSubtle, width: 1.2),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16.r),
-          borderSide: BorderSide(color: AppColors.gray, width: 1),
+          borderSide: const BorderSide(color: AppColors.borderSubtle, width: 1.2),
+        ),
+        focusedBorder: focusedBorder ?? OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.r),
+          borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.8),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.r),
+          borderSide: const BorderSide(color: AppColors.red, width: 1.2),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.r),
+          borderSide: const BorderSide(color: AppColors.red, width: 1.8),
         ),
       ),
     );

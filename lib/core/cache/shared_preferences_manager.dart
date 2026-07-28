@@ -1,7 +1,8 @@
-// import 'package:shared_preferences/shared_preferences.dart';
-
 // Dart imports:
 import 'dart:convert';
+
+// Flutter imports:
+import 'package:flutter/foundation.dart';
 
 // Package imports:
 import 'package:shared_preferences/shared_preferences.dart';
@@ -63,9 +64,14 @@ class SharedPref {
   static Future<bool> saveData(
     String key,
     dynamic value, {
-    bool print1 = true,
+    bool log1 = false,
   }) async {
-    if (print1) print('${value.runtimeType} - $key - $value');
+    if (log1) {
+      assert(() {
+        debugPrint('${value.runtimeType} - $key - $value');
+        return true;
+      }());
+    }
 
     if (value is String) {
       return await sharedPreferences.setString(key, value);

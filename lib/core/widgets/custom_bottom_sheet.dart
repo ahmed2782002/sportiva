@@ -38,7 +38,7 @@ class NewCustomBottomSheet {
     },
   ).whenComplete(whenComplete ?? () {});
 
-  static void showModalBottom(context, {required Widget child}) {
+  static void showModalBottom(BuildContext context, {required Widget child}) {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -55,7 +55,7 @@ class NewCustomBottomSheet {
     );
   }
 
-  static void showStripePaymentBottom(context, {required Widget child}) {
+  static void showStripePaymentBottom(BuildContext context, {required Widget child}) {
     showModalBottomSheet(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
