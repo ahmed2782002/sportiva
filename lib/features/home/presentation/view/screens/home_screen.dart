@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sportive/features/home/presentation/view/screens/user_home_view.dart';
 import '../../../../../core/utils/constants/app_colors.dart';
-import '../../../../role_selection/data/model/account_role.dart';
+import '../../../../common/role_selection/data/model/account_role.dart';
 import 'coach_home_view.dart';
 import 'venue_owner_home_view.dart';
 

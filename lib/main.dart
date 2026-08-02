@@ -5,7 +5,7 @@ import 'core/cache/shared_preferences_manager.dart';
 import 'core/services/dependency_injection.dart';
 import 'core/utils/constants/app_colors.dart';
 import 'core/utils/constants/app_context.dart';
-import 'features/language/presentation/view_model/language_selection_cubit.dart';
+import 'features/common/language/presentation/view_model/language_selection_cubit.dart';
 import 'features/splash/view/screen/splash_screen.dart';
 
 void main() async {

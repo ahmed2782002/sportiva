@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/cache/shared_preferences_manager.dart';
 import '../../../../core/utils/constants/app_strings.dart';
-import '../../../role_selection/data/model/account_role.dart';
+import '../../../common/role_selection/data/model/account_role.dart';
 import 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {

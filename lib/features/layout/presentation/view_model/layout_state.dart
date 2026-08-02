@@ -1,4 +1,4 @@
-import 'package:sportive/features/role_selection/data/model/account_role.dart';
+import 'package:sportive/features/common/role_selection/data/model/account_role.dart';
 
 class LayoutState {
   const LayoutState({

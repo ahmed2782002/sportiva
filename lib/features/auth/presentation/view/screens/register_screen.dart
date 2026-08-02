@@ -9,7 +9,7 @@ import '../../../../../core/utils/nav.dart';
 import '../../../../../core/utils/validators.dart';
 import '../../../../../core/widgets/Button/master_button.dart';
 import '../../../../layout/presentation/view/screens/layout_screen.dart';
-import '../../../../role_selection/data/model/account_role.dart';
+import '../../../../common/role_selection/data/model/account_role.dart';
 import '../../view_model/register_cubit.dart';
 import '../../view_model/register_state.dart';
 import '../widgets/auth_input_field.dart';

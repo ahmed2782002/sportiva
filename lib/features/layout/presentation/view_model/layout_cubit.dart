@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:sportive/core/cache/shared_preferences_manager.dart';
 import 'package:sportive/core/utils/constants/app_strings.dart';
-import 'package:sportive/features/role_selection/data/model/account_role.dart';
+import 'package:sportive/features/common/role_selection/data/model/account_role.dart';
 
 import 'layout_state.dart';
 

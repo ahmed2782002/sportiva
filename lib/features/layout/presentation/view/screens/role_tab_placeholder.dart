@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:sportive/core/utils/constants/app_colors.dart';
 import 'package:sportive/core/utils/constants/app_strings.dart';
-import 'package:sportive/features/role_selection/data/model/account_role.dart';
+import 'package:sportive/features/common/role_selection/data/model/account_role.dart';
 
 class RoleTabPlaceholder extends StatelessWidget {
   const RoleTabPlaceholder({
