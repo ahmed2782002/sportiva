@@ -12,11 +12,13 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await SharedPref.init();
+  await SharedPref.clear();
   await Injection().init();
-
-
   // Read saved locale — fallback to 'en' if not set yet
   final savedLocale = LanguageSelectionCubit.getSavedLocale() ?? const Locale('en');
+// new branch name feature
+  // format code
+  // commit message  but no push
 
   runApp(
     EasyLocalization(

@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:sportive/core/utils/constants/app_strings.dart';
 import 'package:sportive/features/home/presentation/view/widgets/coach_home_header.dart';
 import 'package:sportive/features/home/presentation/view/widgets/coach_metrics_grid.dart';
@@ -23,6 +22,7 @@ class CoachHomeView extends StatelessWidget {
           const CoachHomeHeader(),
           SizedBox(height: 20.h),
 
+          // this home section is for coach only
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Column(
