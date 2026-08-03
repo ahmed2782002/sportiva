@@ -20,6 +20,7 @@ class TitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
+      textDirection: TextDirection.ltr,
       children: List.generate(_word.length, (i) {
         return AnimatedBuilder(
           animation: letterControllers[i],
@@ -29,6 +30,7 @@ class TitleWidget extends StatelessWidget {
               offset: Offset(letterOffsets[i].value, 0),
               child: Text(
                 _word[i],
+                textDirection: TextDirection.ltr,
                 style: const TextStyle(
                   fontSize: 38,
                   fontWeight: FontManger.black,

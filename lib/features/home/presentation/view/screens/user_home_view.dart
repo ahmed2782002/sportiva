@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:sportive/core/utils/constants/app_strings.dart';
 import 'package:sportive/features/home/presentation/view/widgets/featured_venues_carousel.dart';
 import 'package:sportive/features/home/presentation/view/widgets/home_section_header.dart';
@@ -79,4 +78,3 @@ class UserHomeView extends StatelessWidget {
     );
   }
 }
-
