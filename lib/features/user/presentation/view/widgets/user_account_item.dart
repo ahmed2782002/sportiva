@@ -29,14 +29,14 @@ class UserAccountItem extends StatelessWidget {
         child: InkWell(
           onTap: onTap,
           borderRadius: BorderRadius.circular(16),
-          splashColor: primaryColor.withOpacity(0.08),
-          highlightColor: primaryColor.withOpacity(0.04),
+          splashColor: primaryColor.withValues(alpha: 0.08),
+          highlightColor: primaryColor.withValues(alpha: 0.04),
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
-                color: primaryColor.withOpacity(0.08),
+                color: primaryColor.withValues(alpha: 0.08),
                 width: 1,
               ),
             ),
@@ -46,7 +46,7 @@ class UserAccountItem extends StatelessWidget {
                   width: 44,
                   height: 44,
                   decoration: BoxDecoration(
-                    color: (iconBackgroundColor ?? primaryColor).withOpacity(0.1),
+                    color: (iconBackgroundColor ?? primaryColor).withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(
@@ -70,7 +70,7 @@ class UserAccountItem extends StatelessWidget {
                     Icon(
                       Icons.arrow_back_ios_new_rounded,
                       size: 14,
-                      color: primaryColor.withOpacity(0.4),
+                      color: primaryColor.withValues(alpha: 0.4),
                     ),
               ],
             ),

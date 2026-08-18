@@ -70,7 +70,7 @@ class AppString {
   static const String chooseYourLanguage = 'Choose Your Language';
   static const String chooseYourLanguageAr = 'اختر لغتك';
   static const String selectYourPreferredLanguage = 'Select your preferred language to get started';
-  static const String continueButton = 'Continue  /  متابعة';
+  static const String continueButton = 'continue_button';
   static const String logoMarkChar = 'ع';
   static const String skip = 'skip';
   static const String next = 'next';

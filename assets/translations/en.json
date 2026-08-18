@@ -1,6 +1,6 @@
 {
   "appName": "Sportiva",
-
+  "continue_button": "Continue",
   "login": "Login",
   "signIn": "Sign In",
   "signUp": "Sign Up",
@@ -51,13 +51,13 @@
 
   "on_one_title_line1": "Welcome to",
   "on_one_title_line2": "SPORTIVA",
-  "on_one_subtitle": "Manage your fitness journey in one powerful platform.",
+  "on_one_subtitle": "Everything you need to move more, train smarter, and enjoy every step of your sports journey.",
 
   "on_two_title": "Book & Train Easily",
-  "on_two_subtitle": "Discover classes, book sessions, and manage your schedule effortlessly.",
+  "on_two_subtitle": "Find the right activity, book a session in a few taps, and keep your weekly plan organized.",
 
   "on_three_title": "Track Your Fitness Journey",
-  "on_three_subtitle": "Monitor attendance, memberships, and fitness progress in real time."
+  "on_three_subtitle": "Stay motivated with your activity history, upcoming sessions, and progress all in one place."
 
 
   ,"choose_account_type": "How will you use Sportiva?"

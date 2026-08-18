@@ -349,11 +349,7 @@ class _InputWidgetState extends State<CustomInternationalPhoneNumberInput> {
 
 class _InputWidgetView
     extends WidgetView<CustomInternationalPhoneNumberInput, _InputWidgetState> {
-  // ignore: overridden_fields
-  @override
-  final _InputWidgetState state;
-
-  const _InputWidgetView({required this.state}) : super(state: state);
+  const _InputWidgetView({required super.state});
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,7 @@ import 'core/services/dependency_injection.dart';
 import 'core/utils/constants/app_colors.dart';
 import 'core/utils/constants/app_context.dart';
 import 'features/common/language/presentation/view_model/language_selection_cubit.dart';
-import 'features/splash/view/screen/splash_screen.dart';
+import 'features/common/splash/view/screen/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,9 +16,6 @@ void main() async {
   await Injection().init();
   // Read saved locale — fallback to 'en' if not set yet
   final savedLocale = LanguageSelectionCubit.getSavedLocale() ?? const Locale('en');
-// new branch name feature
-  // format code
-  // commit message  but no push
 
   runApp(
     EasyLocalization(
@@ -47,7 +44,6 @@ class MyApp extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        // RTL support: auto-applied based on locale
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
           useMaterial3: true,

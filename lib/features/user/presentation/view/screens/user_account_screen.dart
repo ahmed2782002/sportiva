@@ -51,7 +51,7 @@ class UserAccountScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Colors.white.withOpacity(0.3),
+                          color: Colors.white.withValues(alpha: 0.3),
                           width: 2,
                         ),
                       ),
@@ -83,7 +83,7 @@ class UserAccountScreen extends StatelessWidget {
                         vertical: 5,
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.15),
+                        color: Colors.white.withValues(alpha: 0.15),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: const Text(
@@ -205,7 +205,7 @@ class UserAccountScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(16),
                           border: Border.all(
-                            color: const Color(0xFFE74C3C).withOpacity(0.15),
+                            color: const Color(0xFFE74C3C).withValues(alpha: 0.15),
                             width: 1,
                           ),
                         ),
@@ -250,7 +250,7 @@ class UserAccountScreen extends StatelessWidget {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.04),
+              color: Colors.black.withValues(alpha: 0.04),
               blurRadius: 20,
               offset: const Offset(0, -4),
             ),
@@ -304,12 +304,12 @@ class UserAccountScreen extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: color.withOpacity(0.1),
+            color: color.withValues(alpha: 0.1),
             width: 1,
           ),
           boxShadow: [
             BoxShadow(
-              color: color.withOpacity(0.06),
+              color: color.withValues(alpha: 0.06),
               blurRadius: 12,
               offset: const Offset(0, 4),
             ),

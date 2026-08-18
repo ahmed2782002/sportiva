@@ -30,7 +30,7 @@ class RoleSelectionScreen extends StatelessWidget {
             ),
             child: SafeArea(
               child: Padding(
-                padding: EdgeInsets.fromLTRB(24.w, 20.h, 24.w, 28.h),
+                padding: EdgeInsets.fromLTRB(22.w, 60.h, 22.w, 24.h),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -51,16 +51,16 @@ class RoleSelectionScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 36.h),
+                    SizedBox(height: 25.h),
                     Text(
                       AppString.chooseAccountType.tr(),
                       style: TextStyle(
                         color: AppColors.primaryDark,
-                        fontSize: 28.sp,
+                        fontSize: 27.sp,
                         fontWeight: FontWeight.w800,
                       ),
                     ),
-                    SizedBox(height: 10.h),
+                    SizedBox(height: 12.h),
                     Text(
                       AppString.chooseAccountTypeSubtitle.tr(),
                       style: TextStyle(
@@ -69,14 +69,28 @@ class RoleSelectionScreen extends StatelessWidget {
                         height: 1.5,
                       ),
                     ),
-                    SizedBox(height: 30.h),
-                    ...AccountRole.values.map(
-                      (role) => Padding(
-                        padding: EdgeInsets.only(bottom: 14.h),
-                        child: RoleCard(
-                          role: role,
-                          selected: state.selectedRole == role,
-                          onTap: () => cubit.selectRole(role),
+                    const Spacer(),
+                    Center(
+                      child: SizedBox(
+                        height: 210.h,
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: AccountRole.values.map((role) {
+                            final isFirst = role == AccountRole.values.first;
+                            return Expanded(
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.only(
+                                  end: isFirst ? 6.w : 0,
+                                  start: isFirst ? 0 : 6.w,
+                                ),
+                                child: RoleCard(
+                                  role: role,
+                                  selected: state.selectedRole == role,
+                                  onTap: () => cubit.selectRole(role),
+                                ),
+                              ),
+                            );
+                          }).toList(),
                         ),
                       ),
                     ),

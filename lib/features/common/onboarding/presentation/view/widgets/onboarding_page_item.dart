@@ -13,19 +13,34 @@ class OnboardingPageItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        SizedBox(height: 20.h),
-        _ImageSection(imagePath: page.imagePath),
-        SizedBox(height: 40.h),
-        _TitleSection(
-          titleKey:      page.titleKey,
-          titleLine2Key: page.titleLine2Key,
-        ),
-        SizedBox(height: 12.h),
-        _SubtitleSection(subtitleKey: page.subtitleKey),
-      ],
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final imageHeight = (constraints.maxHeight * 0.48)
+            .clamp(245.h, 300.h)
+            .toDouble();
+
+        return SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 20.h),
+              _ImageSection(
+                imagePath: page.imagePath,
+                height: imageHeight,
+              ),
+              SizedBox(height: 40.h),
+              _TitleSection(
+                titleKey: page.titleKey,
+                titleLine2Key: page.titleLine2Key,
+              ),
+              SizedBox(height: 30.h),
+              _SubtitleSection(subtitleKey: page.subtitleKey),
+              SizedBox(height: 18.h),
+            ],
+          ),
+        );
+      },
     );
   }
 }
@@ -33,7 +48,9 @@ class OnboardingPageItem extends StatelessWidget {
 
 class _ImageSection extends StatelessWidget {
   final String imagePath;
-  const _ImageSection({required this.imagePath});
+  final double height;
+
+  const _ImageSection({required this.imagePath, required this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +61,7 @@ class _ImageSection extends StatelessWidget {
           Image.asset(
             imagePath,
             width:  double.infinity,
-            height: 340.h,
+            height: height,
             fit:    BoxFit.cover,
           ),
           // Subtle gradient overlay at bottom for depth
@@ -105,7 +122,7 @@ class _TitleSection extends StatelessWidget {
   }
 
   TextStyle get _titleStyle => TextStyle(
-        fontSize:   26.sp,
+        fontSize:   35.sp,
         fontWeight: FontManger.extraBold,
         color:      AppColors.primaryDark,
         height:     1.3,
@@ -126,7 +143,7 @@ class _SubtitleSection extends StatelessWidget {
         subtitleKey.tr(),
         textAlign: TextAlign.center,
         style: TextStyle(
-          fontSize:   15.sp,
+          fontSize:   18.sp,
           fontWeight: FontManger.regular,
           color:      AppColors.neutral600,
           height:     1.5,

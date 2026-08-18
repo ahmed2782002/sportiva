@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/cache/shared_preferences_manager.dart';
 import '../../../../../core/utils/constants/app_strings.dart';
+import '../../../../../core/utils/nav.dart';
+import '../../../role_selection/presentation/view/screens/role_selection_screen.dart';
 import '../../data/model/language_model.dart';
 import 'language_selection_state.dart';
 
@@ -15,10 +17,7 @@ class LanguageSelectionCubit extends Cubit<LanguageSelectionState> {
     emit(state.copyWith(selectedLanguage: language));
   }
 
-  Future<void> confirmSelection(
-    BuildContext context,
-    void Function(LanguageModel) onSuccess,
-  ) async {
+  Future<void> confirmSelection(BuildContext context) async {
     if (!state.hasSelection) return;
     emit(state.copyWith(isLoading: true));
 
@@ -32,7 +31,7 @@ class LanguageSelectionCubit extends Cubit<LanguageSelectionState> {
     await SharedPref.saveData(AppString.isLanguageSelected, true);
 
     emit(state.copyWith(isLoading: false));
-    onSuccess(language);
+    navigateFinish(const RoleSelectionScreen());
   }
 
   /// Returns the saved locale, or null if not set yet.

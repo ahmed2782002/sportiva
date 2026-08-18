@@ -21,50 +21,68 @@ class RoleCard extends StatelessWidget {
     color: Colors.transparent,
     child: InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(20.r),
+      borderRadius: BorderRadius.circular(22.r),
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 180),
-        padding: EdgeInsets.all(18.w),
+        duration: const Duration(milliseconds: 220),
+        padding: EdgeInsets.all(15.w),
         decoration: BoxDecoration(
-          color: selected ? AppColors.primaryLighter : AppColors.surfaceCard,
-          borderRadius: BorderRadius.circular(20.r),
+          gradient: selected ? AppColors.primaryGradient : null,
+          color: selected ? null : AppColors.surfaceCard,
+          borderRadius: BorderRadius.circular(22.r),
           border: Border.all(
             color: selected ? AppColors.primaryColor : AppColors.borderSubtle,
-            width: selected ? 1.7 : 1,
+            width: selected ? 2 : 1,
           ),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.primaryDark.withValues(
+                alpha: selected ? 0.14 : 0.04,
+              ),
+              blurRadius: selected ? 14 : 8,
+              offset: const Offset(0, 5),
+            ),
+          ],
         ),
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Align(
+              alignment: AlignmentDirectional.topEnd,
+              child: Icon(
+                selected ? Icons.check_circle_rounded : Icons.circle_outlined,
+                size: 22.sp,
+                color: selected ? AppColors.white : AppColors.neutral400,
+              ),
+            ),
+            const Spacer(),
             Container(
-              width: 48.w,
-              height: 48.w,
+              width: 64.w,
+              height: 64.w,
               decoration: BoxDecoration(
-                gradient: selected ? AppColors.primaryGradient : null,
-                color: selected ? null : AppColors.primaryLighter,
-                borderRadius: BorderRadius.circular(15.r),
+                color: selected
+                    ? AppColors.white.withValues(alpha: 0.18)
+                    : AppColors.primaryLighter,
+                shape: BoxShape.circle,
               ),
               child: Icon(
                 role.icon,
+                size: 30.sp,
                 color: selected ? AppColors.white : AppColors.primaryColor,
               ),
             ),
-            SizedBox(width: 16.w),
-            Expanded(
-              child: Text(
-                role.title,
-                style: TextStyle(
-                  fontSize: 17.sp,
-                  color: AppColors.primaryDark,
-                  fontWeight: FontWeight.w700,
-                ),
+            SizedBox(height: 14.h),
+            Text(
+              role.title,
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontSize: 15.sp,
+                color: selected ? AppColors.white : AppColors.primaryDark,
+                fontWeight: FontWeight.w800,
               ),
             ),
-            Icon(
-              selected
-                  ? Icons.check_circle_rounded
-                  : Icons.radio_button_unchecked_rounded,
-              color: selected ? AppColors.primaryColor : AppColors.neutral400,
-            ),
+            const Spacer(),
           ],
         ),
       ),
