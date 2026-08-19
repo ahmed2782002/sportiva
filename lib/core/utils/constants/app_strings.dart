@@ -210,6 +210,100 @@ class AppString {
   static const String session2Type = 'session_2_type';
   static const String requestName = 'request_name';
   static const String requestProgram = 'request_program';
+
+  // ===== User Experience: Bottom Navigation =====
+  static const String navHome = 'nav_home';
+  static const String navSearch = 'nav_search';
+  static const String navBookings = 'nav_bookings';
+  static const String navChat = 'nav_chat';
+  static const String navProfile = 'nav_profile';
+
+  // ===== User Experience: Home =====
+  static const String goodMorning = 'good_morning';
+  static const String goodAfternoon = 'good_afternoon';
+  static const String goodEvening = 'good_evening';
+  static const String upcomingBooking = 'upcoming_booking';
+  static const String viewDetails = 'view_details';
+  static const String allSports = 'all_sports';
+  static const String featuredVenues = 'featured_venues';
+  static const String available = 'available';
+  static const String nearMe = 'near_me';
+  static const String venuesActive = 'venues_active';
+  static const String withinRadius = 'within_radius';
+  static const String flashDeals = 'flash_deals';
+  static const String limitedOffer = 'limited_offer';
+  static const String claimNow = 'claim_now';
+  static const String featuredCoaches = 'featured_coaches';
+  static const String community = 'community';
+
+  // ===== User Experience: Search =====
+  static const String discover = 'discover';
+  static const String discoverSearchHint = 'discover_search_hint';
+  static const String searchBySport = 'search_by_sport';
+  static const String topRatedVenues = 'top_rated_venues';
+  static const String quickBook = 'quick_book';
+  static const String mapView = 'map_view';
+  static const String sportTennis = 'sport_tennis';
+  static const String sportGym = 'sport_gym';
+  static const String sportYoga = 'sport_yoga';
+
+  // ===== User Experience: Bookings =====
+  static const String tabUpcoming = 'tab_upcoming';
+  static const String tabCompleted = 'tab_completed';
+  static const String tabCancelled = 'tab_cancelled';
+  static const String statusConfirmed = 'status_confirmed';
+  static const String statusPending = 'status_pending';
+  static const String statusCompleted = 'status_completed';
+  static const String statusRejected = 'status_rejected';
+  static const String cancelBooking = 'cancel_booking';
+  static const String bookAgain = 'book_again';
+  static const String rate = 'rate';
+  static const String rejectionReason = 'rejection_reason';
+  static const String noBookingsTitle = 'no_bookings_title';
+  static const String noBookingsSubtitle = 'no_bookings_subtitle';
+
+  // ===== User Experience: Chat =====
+  static const String messages = 'messages';
+  static const String searchConversations = 'search_conversations';
+  static const String pinned = 'pinned';
+  static const String recent = 'recent';
+  static const String typeMessage = 'type_message';
+  static const String online = 'online';
+  static const String today = 'today';
+  static const String noConversations = 'no_conversations';
+
+  // ===== User Experience: Profile & Settings =====
+  static const String accountAndSettings = 'account_and_settings';
+  static const String premium = 'premium';
+  static const String sportivaPlus = 'sportiva_plus';
+  static const String activePlan = 'active_plan';
+  static const String renewsOn = 'renews_on';
+  static const String manage = 'manage';
+  static const String points = 'points';
+  static const String pointsToNextReward = 'points_to_next_reward';
+  static const String personal = 'personal';
+  static const String identityVerification = 'identity_verification';
+  static const String verified = 'verified';
+  static const String privacy = 'privacy';
+  static const String profileVisibility = 'profile_visibility';
+  static const String publicVisibility = 'public_visibility';
+  static const String privateVisibility = 'private_visibility';
+  static const String payments = 'payments';
+  static const String paymentMethods = 'payment_methods';
+  static const String savedVouchers = 'saved_vouchers';
+  static const String vouchersAvailable = 'vouchers_available';
+  static const String preferences = 'preferences';
+  static const String notificationSettings = 'notification_settings';
+  static const String notificationChannels = 'notification_channels';
+  static const String language = 'language';
+  static const String support = 'support';
+  static const String helpCenter = 'help_center';
+  static const String termsOfService = 'terms_of_service';
+  static const String deleteAccount = 'delete_account';
+
+  // ===== Shared =====
+  static const String comingSoon = 'coming_soon';
+  static const String cancel = 'cancel';
 }
 
 

@@ -8,6 +8,7 @@ import 'package:sportive/core/utils/constants/app_strings.dart';
 import 'package:sportive/core/utils/nav.dart';
 import 'package:sportive/core/utils/validators.dart';
 import 'package:sportive/core/widgets/Button/master_button.dart';
+import 'package:sportive/features/common/role_selection/presentation/view_model/role_home_router.dart';
 import '../../view_model/login_cubit.dart';
 import '../../view_model/login_state.dart';
 import '../widgets/auth_input_field.dart';
@@ -84,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                   text: AppString.signIn.tr(),
                   onPressed: () {
                     if (cubit.validate()) {
-                   //   navigateFinish(HomeScreen(role: cubit.role));
+                      navigateToRoleHome(context, cubit.role);
                     }
                   },
                   height: 56.h,

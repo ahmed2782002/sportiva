@@ -9,6 +9,7 @@ import 'package:sportive/core/utils/nav.dart';
 import 'package:sportive/core/utils/validators.dart';
 import 'package:sportive/core/widgets/Button/master_button.dart';
 import 'package:sportive/features/common/role_selection/data/model/account_role.dart';
+import 'package:sportive/features/common/role_selection/presentation/view_model/role_home_router.dart';
 import '../../view_model/register_cubit.dart';
 import '../../view_model/register_state.dart';
 import '../widgets/auth_input_field.dart';
@@ -111,7 +112,7 @@ class RegisterScreen extends StatelessWidget {
                   text: AppString.createAccount.tr(),
                   onPressed: () {
                     if (cubit.validate()) {
-                   //   navigateFinish(HomeScreen(role: role));
+                      navigateToRoleHome(context, role);
                     }
                   },
                   height: 56.h,
