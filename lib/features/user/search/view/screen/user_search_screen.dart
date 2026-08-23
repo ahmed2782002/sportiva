@@ -13,6 +13,8 @@ import 'package:sportive/features/user/shared/view/widget/user_style.dart';
 import 'package:sportive/features/user/search/view/widget/discover_search_field.dart';
 import 'package:sportive/features/user/search/view/widget/sport_category_card.dart';
 import 'package:sportive/features/user/search/view/widget/top_rated_venue_card.dart';
+import 'package:sportive/features/user/booking_flow/view/screen/booking_flow_screen.dart';
+import 'package:sportive/features/user/booking_shared/model/booking_models.dart';
 
 class UserSearchScreen extends StatelessWidget {
   const UserSearchScreen({super.key});
@@ -83,9 +85,7 @@ class UserSearchScreen extends StatelessWidget {
                               decoration: BoxDecoration(
                                 color: AppColors.white,
                                 borderRadius: BorderRadius.circular(19.r),
-                                border: Border.all(
-                                  color: AppColors.neutral200,
-                                ),
+                                border: Border.all(color: AppColors.neutral200),
                               ),
                               child: Text(
                                 label,
@@ -114,13 +114,12 @@ class UserSearchScreen extends StatelessWidget {
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
                         itemCount: UserMockData.sportCategories.length,
-                        gridDelegate:
-                            SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                              mainAxisSpacing: 14.h,
-                              crossAxisSpacing: 14.w,
-                              childAspectRatio: 1.45,
-                            ),
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 14.h,
+                          crossAxisSpacing: 14.w,
+                          childAspectRatio: 1.45,
+                        ),
                         itemBuilder: (context, index) => SportCategoryCard(
                           sport: UserMockData.sportCategories[index],
                           isSelected: state.selectedSportIndex == index,
@@ -154,7 +153,10 @@ class UserSearchScreen extends StatelessWidget {
                           padding: EdgeInsets.fromLTRB(20.w, 0, 20.w, 18.h),
                           child: TopRatedVenueCard(
                             venue: venue,
-                            onQuickBook: () => _showComingSoon(context),
+                            onQuickBook: () => BookingFlowScreen.open(
+                              context,
+                              venue: BookingVenue.fromVenue(venue),
+                            ),
                           ),
                         ),
                       ),

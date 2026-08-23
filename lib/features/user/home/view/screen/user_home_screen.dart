@@ -20,6 +20,8 @@ import 'package:sportive/features/user/home/view/widget/home_greeting_bar.dart';
 import 'package:sportive/features/user/home/view/widget/near_me_card.dart';
 import 'package:sportive/features/user/home/view/widget/sport_filter_chips.dart';
 import 'package:sportive/features/user/home/view/widget/upcoming_booking_card.dart';
+import 'package:sportive/features/user/booking_flow/view/screen/booking_flow_screen.dart';
+import 'package:sportive/features/user/booking_shared/model/booking_models.dart';
 
 class UserHomeScreen extends StatelessWidget {
   const UserHomeScreen({super.key});
@@ -79,7 +81,12 @@ class UserHomeScreen extends StatelessWidget {
                           separatorBuilder: (_, _) => SizedBox(width: 14.w),
                           itemBuilder: (context, index) => FeaturedVenueCard(
                             venue: UserMockData.featuredVenues[index],
-                            onTap: () => _goToTab(context, UserTab.search),
+                            onTap: () => BookingFlowScreen.open(
+                              context,
+                              venue: BookingVenue.fromVenue(
+                                UserMockData.featuredVenues[index],
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -106,7 +113,10 @@ class UserHomeScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 14.h),
-                      Padding(padding: horizontal, child: const FlashDealCard()),
+                      Padding(
+                        padding: horizontal,
+                        child: const FlashDealCard(),
+                      ),
                       SizedBox(height: 28.h),
                       Padding(
                         padding: horizontal,

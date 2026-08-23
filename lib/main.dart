@@ -6,7 +6,7 @@ import 'core/services/dependency_injection.dart';
 import 'core/utils/constants/app_colors.dart';
 import 'core/utils/constants/app_context.dart';
 import 'features/common/language/presentation/view_model/language_selection_cubit.dart';
-import 'features/common/splash/view/screen/splash_screen.dart';
+import 'features/user/shell/view/screen/user_shell_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +15,8 @@ void main() async {
   await SharedPref.clear();
   await Injection().init();
   // Read saved locale — fallback to 'en' if not set yet
-  final savedLocale = LanguageSelectionCubit.getSavedLocale() ?? const Locale('en');
+  final savedLocale =
+      LanguageSelectionCubit.getSavedLocale() ?? const Locale('en');
 
   runApp(
     EasyLocalization(
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
         ),
         home: child,
       ),
-      child: const SplashScreen(),
+      child: const UserShellScreen(),
     );
   }
 }
