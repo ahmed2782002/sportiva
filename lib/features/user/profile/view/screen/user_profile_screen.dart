@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:sportive/core/utils/constants/app_colors.dart';
 import 'package:sportive/core/utils/constants/app_strings.dart';
+import 'package:sportive/core/utils/nav.dart';
 import 'package:sportive/features/user/shared/datasource/user_mock_data.dart';
 import 'package:sportive/features/user/profile/view_models/user_profile_cubit.dart';
 import 'package:sportive/features/user/profile/view_models/user_profile_state.dart';
@@ -13,6 +14,16 @@ import 'package:sportive/features/user/shared/view/widget/user_style.dart';
 import 'package:sportive/features/user/profile/view/widget/premium_card.dart';
 import 'package:sportive/features/user/profile/view/widget/points_card.dart';
 import 'package:sportive/features/user/profile/view/widget/settings_group.dart';
+
+// Profile Sub-features imports
+import 'package:sportive/features/user/membership/view/screen/membership_screen.dart';
+import 'package:sportive/features/user/rewards/view/screen/rewards_screen.dart';
+import 'package:sportive/features/user/identity_verification/view/screen/identity_verification_screen.dart';
+import 'package:sportive/features/user/payment_methods/view/screen/payment_methods_screen.dart';
+import 'package:sportive/features/user/vouchers/view/screen/vouchers_screen.dart';
+import 'package:sportive/features/user/notification_settings/view/screen/notification_settings_screen.dart';
+import 'package:sportive/features/user/help_center/view/screen/help_center_screen.dart';
+import 'package:sportive/features/user/terms_privacy/view/screen/terms_privacy_screen.dart';
 
 class UserProfileScreen extends StatelessWidget {
   const UserProfileScreen({super.key});
@@ -107,13 +118,13 @@ class UserProfileScreen extends StatelessWidget {
               SizedBox(height: 20.h),
               PremiumCard(
                 renewDate: UserMockData.planRenewDate,
-                onManage: () => _showComingSoon(context),
+                onManage: () => navigateTo(const MembershipScreen()),
               ),
               SizedBox(height: 14.h),
               PointsCard(
                 points: UserMockData.points,
                 pointsToReward: UserMockData.pointsToNextReward,
-                onTap: () => _showComingSoon(context),
+                onTap: () => navigateTo(const RewardsScreen()),
               ),
               SizedBox(height: 20.h),
               SettingsGroup(
@@ -123,7 +134,7 @@ class UserProfileScreen extends StatelessWidget {
                     icon: Icons.badge_outlined,
                     title: AppString.identityVerification.tr(),
                     subtitle: AppString.verified.tr(),
-                    onTap: () => _showComingSoon(context),
+                    onTap: () => navigateTo(const IdentityVerificationScreen()),
                   ),
                   SettingsTile(
                     icon: Icons.lock_outline_rounded,
@@ -178,7 +189,7 @@ class UserProfileScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    onTap: () => _showComingSoon(context),
+                    onTap: () => navigateTo(const PaymentMethodsScreen()),
                   ),
                   SettingsTile(
                     icon: Icons.local_offer_outlined,
@@ -186,7 +197,7 @@ class UserProfileScreen extends StatelessWidget {
                     subtitle: AppString.vouchersAvailable.tr(
                       args: ['${UserMockData.vouchersCount}'],
                     ),
-                    onTap: () => _showComingSoon(context),
+                    onTap: () => navigateTo(const VouchersScreen()),
                   ),
                 ],
               ),
@@ -198,7 +209,7 @@ class UserProfileScreen extends StatelessWidget {
                     icon: Icons.notifications_none_rounded,
                     title: AppString.notificationSettings.tr(),
                     subtitle: AppString.notificationChannels.tr(),
-                    onTap: () => _showComingSoon(context),
+                    onTap: () => navigateTo(const NotificationSettingsScreen()),
                   ),
                   SettingsTile(
                     icon: Icons.language_rounded,
@@ -245,12 +256,12 @@ class UserProfileScreen extends StatelessWidget {
                   SettingsTile(
                     icon: Icons.help_outline_rounded,
                     title: AppString.helpCenter.tr(),
-                    onTap: () => _showComingSoon(context),
+                    onTap: () => navigateTo(const HelpCenterScreen()),
                   ),
                   SettingsTile(
                     icon: Icons.description_outlined,
                     title: AppString.termsOfService.tr(),
-                    onTap: () => _showComingSoon(context),
+                    onTap: () => navigateTo(const TermsPrivacyScreen()),
                   ),
                 ],
               ),
